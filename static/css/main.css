@@ -1,0 +1,16 @@
+header {
+ border-bottom: 5px solid black;
+}
+
+h1,h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+}
+
+p, nav {
+  font-family: serif;
+  font-size: 1.1rem;
+}
+
+footer {
+  background: rgb(160, 160, 160);
+}

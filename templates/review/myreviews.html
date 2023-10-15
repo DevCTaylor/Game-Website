@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "_base.html" %}
+
+{% block title%}My Reviews{% endblock title %}
+{% block main %}
+  <h1 class="text-center">My Reviews</h1>
+    {% if user.is_authenticated %}
+      <div class="jumbotron jumbotron-fluid">
+      <div class="card border-2 border-rounded shadow m-auto p-3 text-center" style="max-width: 50rem;">
+        <div class="list-group list-group-flush">
+        {% for review in myreviews %}
+        <ul class="list-group-item" style="list-style: none;">
+          <li class="text-center h5">
+            On {{ review.created|date }} you gave {{ review.game }} {{ review.votes }} vote{{ review.votes|pluralize:'s'}} and said:
+          </li>
+          <li class="my-2 pb-2 h5">
+            "{{ review.comment }}"
+          </li>
+          <div class="ms-5 me-5">
+            <a href="{% url 'update' review.pk %}"
+            class="btn btn-primary btn-sm me-5">Update</a>             
+            <a href="{% url 'delete' review.pk %}"
+                class="btn btn-danger btn-sm ms-5">Delete
+            </a>
+          </div>          
+        </ul>
+      {% endfor %}
+    {% endif %}
+{% endblock main %}
+      

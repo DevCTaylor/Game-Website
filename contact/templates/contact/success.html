@@ -1,0 +1,13 @@
+{% extends "_base.html" %}
+{% load static %}
+{% block title%}Contact{% endblock title %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'contact/contact.css' %}">
+{% block main %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="card border-2 border shadow border-rounded m-auto p-3 text-center my-5" style="max-width: 50rem;" >
+        <h2>Thank you for getting in touch</h2>
+        <h3 class="my-4">Your contact information and message were successfully submitted.</h3>
+    </div>
+</div>
+{% endblock main %}

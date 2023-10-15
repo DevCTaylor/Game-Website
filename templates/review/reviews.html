@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends "_base.html" %}
+
+{% block title%}Reviews{% endblock title %}
+{% block main %}
+  <h1 class="text-center">Reviews</h1>
+      <h2 class="text-center">Anagram Hunt</h2>
+      <div class="jumbotron jumbotron-fluid">
+      <div class="card border-2 border-rounded shadow m-auto p-3 text-center" style="max-width: 50rem;">
+        <div class="list-group list-group-flush">
+          {% for review in anagram_reviews %}
+            <ul class="list-group-item" style="list-style: none;">
+              <li class="text-center h5">
+                On {{ review.created|date }} {{ review.username }} gave Anagram Hunt {{ review.votes }} star{{ review.votes|pluralize:'s'}} and said:
+              </li>
+              <li class="my-2 pb-2 h5">
+                "{{ review.comment }}"
+              </li>
+            </ul>
+          {% endfor %}
+          </div>
+          </div>
+      </div>
+    <div>
+    <br />
+    <h2 class="text-center">Math Facts</h2>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="card border-2 border-rounded shadow m-auto p-3 text-center" style="max-width: 50rem;">
+        <div class="list-group list-group-flush">
+          {% for review in math_reviews %}
+            <ul class="list-group-item" style="list-style: none;">
+              <li class="text-center h5">
+                On {{ review.created|date }} {{ review.username }} gave Math Facts {{ review.votes }} star{{ review.votes|pluralize:'s'}} and said:
+              </li>
+              <li class="my-2 pb-2 h5">
+                "{{ review.comment }}"
+              </li>
+            </ul>
+          {% endfor %}
+        </div>
+        </div>
+    </div>
+  </div>
+{% endblock main %}
