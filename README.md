@@ -6,11 +6,6 @@ You'll need a [SendGrid](https://sendgrid.com/) account. Email settings in `sett
 
 I put my SENDGRID_API_KEY in a `local_settings.py`.
 
-**Note to instructor(s):**
-
-I set up my SendGrid account just like I was taught in Lesson 7 of the Django course.
-Hopefully that makes it easier to get this app up and running so you can grade the thing.
-
 1. Unzip the file
 2. Open terminal.
 3. `$=> python -m venv .venv`
@@ -24,7 +19,7 @@ Don't forget to create a superuser for Django's admin and run migrations
 8. `$=> npm install`
 9. `$=> npm run serve`
 
-You should have the Django application running at:
+The Django application should run at:
 
 http://127.0.0.1:8000/#/
 
