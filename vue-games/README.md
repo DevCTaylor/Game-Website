@@ -1,7 +1,6 @@
-# Play2Learn
-### An educational website that I'm building for my software developer class.
+# Game Website Project
 
-Thank you for taking the time to read this, and have fun with the math and anagram games.
+Have fun with the math and anagram games.
 
 ## Project setup
 ```
