@@ -1,6 +1,4 @@
-# DjangoProject
-
-## Play2Learn Complete Website Project
+# Games Website Project
 
 ## Instructions
 
